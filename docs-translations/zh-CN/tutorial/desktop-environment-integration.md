@@ -3,7 +3,7 @@
 
 本章将会说明怎样使用 Electron APIs 把你的应用和桌面环境集成到一块。
 
-## Notifications (Windows, Linux, OS X)
+## Notifications (Windows, Linux, macOS)
 
 这三个操作系统都为用户提供了发送通知的方法。Electron让开发人员通过
 [HTML5 Notification API](https://notifications.spec.whatwg.org/)
@@ -38,14 +38,14 @@ Model ID][app-user-model-id]安装到开始屏幕上。需要注意的是，这�
 Specification][notification-spec]的桌面环境中显示，包括 Cinnamon, Enlightenment, Unity,
 GNOME, KDE。
 
-### OS X
+### macOS
 
-在OS X系统中，通知是直接转发的，你应该了解[Apple's Human Interface guidelines regarding notifications](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/NotificationCenter.html)。
+在macOS系统中，通知是直接转发的，你应该了解[Apple's Human Interface guidelines regarding notifications](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/NotificationCenter.html)。
 
 注意通知被限制在256个字节以内，如果超出，则会被截断。
 
-## 最近文档 (Windows & OS X)
-Windows 和 OS X 提供获取最近文档列表的便捷方式，那就是打开跳转列表或者鱼眼菜单。
+## 最近文档 (Windows & macOS)
+Windows 和 macOS 提供获取最近文档列表的便捷方式，那就是打开跳转列表或者鱼眼菜单。
 
 跳转列表：
 ![JumpList][1]
@@ -66,15 +66,15 @@ app.clearRecentDocuments();
 ## Windows 需注意
 为了这个特性在 Windows 上表现正常，你的应用需要被注册成为一种文件类型的句柄，否则，在你注册之前，文件不会出现在跳转列表。你可以在 [Application Registration][5] 里找到任何关于注册事宜的说明。
 
-## OS X 需注意
+## macOS 需注意
 当一个文件被最近文件列表请求时，`app` 模块里的 `open-file` 事件将会被发出。
 
-## 自定义的鱼眼菜单(OS X)
-OS X 可以让开发者定制自己的菜单，通常会包含一些常用特性的快捷方式。
+## 自定义的鱼眼菜单(macOS)
+macOS 可以让开发者定制自己的菜单，通常会包含一些常用特性的快捷方式。
 ### 菜单中的终端
 ![Dock menu of Terminal.app][6]
 
-使用 `app.dock.setMenu` API 来设置你的菜单，这仅在 OS X 上可行：
+使用 `app.dock.setMenu` API 来设置你的菜单，这仅在 macOS 上可行：
 ```javascript
 var app = require('app');
 var Menu = require('menu');
@@ -98,7 +98,7 @@ app.dock.setMenu(dockMenu);
 
 ### IE 的任务
 ![IE][7]
-不同于 OS X 的鱼眼菜单，Windows 上的用户任务表现得更像一个快捷方式，比如当用户点击一个任务，一个程序将会被传入特定的参数并且运行。
+不同于 macOS 的鱼眼菜单，Windows 上的用户任务表现得更像一个快捷方式，比如当用户点击一个任务，一个程序将会被传入特定的参数并且运行。
 
 你可以使用 [app.setUserTasks][8] API 来设置你的应用中的用户任务：
 ```javascript
@@ -177,7 +177,7 @@ Unity DE 也具有同样的特性，在运行器上显示进度条。
 var window = new BrowserWindow({...});
 window.setProgressBar(0.5);
 ```
-在 OS X，一个窗口可以设置它展示的文件，文件的图标可以出现在标题栏，当用户 Command-Click 或者 Control-Click 标题栏，文件路径弹窗将会出现。
+在 macOS，一个窗口可以设置它展示的文件，文件的图标可以出现在标题栏，当用户 Command-Click 或者 Control-Click 标题栏，文件路径弹窗将会出现。
 ### 展示文件弹窗菜单：
 ![Represented file popup menu][16]
 
@@ -206,7 +206,7 @@ window.setDocumentEdited(true);
   [16]: https://cloud.githubusercontent.com/assets/639601/5082061/670a949a-6f14-11e4-987a-9aaa04b23c1d.png
   [17]: https://github.com/electron/electron/blob/master/docs-translations/zh-CN/api/browser-window.md
   [18]: https://github.com/electron/electron/blob/master/docs-translations/zh-CN/api/browser-window.md
-  
+
 [addrecentdocument]: ../api/app.md#appaddrecentdocumentpath-os-x-windows
 [clearrecentdocuments]: ../api/app.md#appclearrecentdocuments-os-x-windows
 [setusertaskstasks]: ../api/app.md#appsetusertaskstasks-windows

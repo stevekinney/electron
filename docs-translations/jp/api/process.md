@@ -28,11 +28,11 @@ process.once('loaded', function() {
 
 これを`true`に設定すると、Nodeのビルトインモジュールで、`asar`アーカイブのサポートを無効にできます。
 
-### `process.type` 
+### `process.type`
 
 現在のプロセスのタイプで、`"browser"`(例: メインプロセス) または `"renderer"`の値をとります。
 
-### `process.versions.electron` 
+### `process.versions.electron`
 
 Electronのバージョン文字列です。
 
@@ -72,7 +72,7 @@ Windows Store App (appx)として動作中の場合は、値は`true`になり�
 
 このプロセスのメインスレッドをハングさせます。
 
-### `process.setFdLimit(maxDescriptors)` _OS X_ _Linux_
+### `process.setFdLimit(maxDescriptors)` _macOS_ _Linux_
 
 * `maxDescriptors` Integer
 

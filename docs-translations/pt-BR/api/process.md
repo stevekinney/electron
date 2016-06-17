@@ -1,7 +1,7 @@
 # process
 O objeto `process` no Electron tem as seguintes diferenças do objeto no upstream node:
 
-* `process.type` String - Tipo de processo, pode ser `browser` (processo principal) 
+* `process.type` String - Tipo de processo, pode ser `browser` (processo principal)
 ou `renderer`.
 * `process.versions.electron` String - Versão do Electron.
 * `process.versions.chrome` String - Versão do Chromium.
@@ -40,9 +40,9 @@ O objeto `process` tem os seguintes métodos:
 
 Faz com que o *thread* principal do processo congele.
 
-### `process.setFdLimit(maxDescriptors)` _OS X_ _Linux_
+### `process.setFdLimit(maxDescriptors)` _macOS_ _Linux_
 
 * `maxDescriptors` Integer
 
-Define o limite do arquivo descritor para `maxDescriptors` ou para o limite do OS, 
+Define o limite do arquivo descritor para `maxDescriptors` ou para o limite do OS,
 o que for menor para o processo atual.

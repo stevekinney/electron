@@ -29,7 +29,7 @@
     지정해야 합니다.
   * `submenu` Menu - 반드시 `submenu` 타입의 메뉴 아이템에만 지정해야 합니다. 만약
     `submenu`가 지정되면 `type: 'submenu'`는 생략될 수 있습니다. 만약 값이 `Menu`가
-    아닐 경우 `Menu.buildFromTemplate`을 통해 자동적으로 변환됩니다.     
+    아닐 경우 `Menu.buildFromTemplate`을 통해 자동적으로 변환됩니다.
   * `id` String - 현재 메뉴 아이템에 대해 유일키를 지정합니다. 이 키는 이후
     `position` 옵션에서 사용할 수 있습니다.
   * `position` String - 미리 지정한 `id`를 이용하여 메뉴 아이템의 위치를 세밀하게
@@ -52,7 +52,7 @@
 * `minimize` - 현재 윈도우를 최소화합니다
 * `close` - 현재 윈도우를 닫습니다
 
-OS X에서의 `role`은 다음 값을 추가로 가질 수 있습니다:
+macOS에서의 `role`은 다음 값을 추가로 가질 수 있습니다:
 
 * `about` - `orderFrontStandardAboutPanel` 액션에 대응
 * `hide` - `hide` 액션에 대응
@@ -63,7 +63,7 @@ OS X에서의 `role`은 다음 값을 추가로 가질 수 있습니다:
 * `help` - 부 메뉴를 가지는 "Help" 메뉴
 * `services` - 부 메뉴를 가지는 "Services" 메뉴
 
-OS X에서는 `role`을 지정할 때, `label`과 `accelerator`만 MenuItem에 효과가
+macOS에서는 `role`을 지정할 때, `label`과 `accelerator`만 MenuItem에 효과가
 적용되도록 변경되며, 다른 옵션들은 모두 무시됩니다.
 
 ## Instance Properties

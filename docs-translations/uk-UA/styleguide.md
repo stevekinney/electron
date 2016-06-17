@@ -24,14 +24,14 @@ or [writing Electron documentation](#writing-electron-documentation).
 - Optional arguments are denoted when called out in list.
 - Line length is 80-column wrapped.
 - Platform specific methods are noted in italics following method header.
- - ```### `method(foo, bar)` _OS X_```
+ - ```### `method(foo, bar)` _macOS_```
 - Prefer 'in the ___ process' over 'on'
 
 ### Переклад документації
 
 Переклади документації знаходяться в дерикторії `docs-translations`.
 
-Щоб додати переклад (або частковий переклад) документації:  
+Щоб додати переклад (або частковий переклад) документації:
 
 - Create a subdirectory named by language abbreviation.
 - Within that subdirectory, duplicate the `docs` directory, keeping the
@@ -43,7 +43,7 @@ or [writing Electron documentation](#writing-electron-documentation).
 
 ## Читання документації Electron
 
-Кілька порад для того щоб легше зрозуміти синтаксис документації Electron.  
+Кілька порад для того щоб легше зрозуміти синтаксис документації Electron.
 
 ### Методи
 

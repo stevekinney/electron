@@ -17,14 +17,14 @@
 
 ## Регистрируем свое приложение (подписываем)
 
-После того, как Вы получили сертефикат, Вы можете упаковать свое прилоежние следуя правилам Application Distribution, 
+После того, как Вы получили сертефикат, Вы можете упаковать свое прилоежние следуя правилам Application Distribution,
 а затем подписать свое приложение. Этот шаг является базовым, но подписывать свое приложение нам нужно всего лишь один раз.
 
 Во-первых, нам нужно подготовить два файла:
 
 `child.plist`:
 
-```xml    
+```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
     <plist version="1.0">
@@ -35,11 +35,11 @@
         <true/>
       </dict>
     </plist>
-```  
+```
 
 `parent.plist`:
 
-```xml  
+```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
     <plist version="1.0">
@@ -66,9 +66,9 @@
     # Имя сертификата которое вы хотите.
     APP_KEY="3rd Party Mac Developer Application: Company Name (APPIDENTITY)"
     INSTALLER_KEY="3rd Party Mac Developer Installer: Company Name (APPIDENTITY)"
-    
+
     FRAMEWORKS_PATH="$APP_PATH/Contents/Frameworks"
-    
+
     codesign -s "$APP_KEY" -f --entitlements child.plist "$FRAMEWORKS_PATH/Electron Framework.framework/Versions/A/Electron Framework"
     codesign -s "$APP_KEY" -f --entitlements child.plist "$FRAMEWORKS_PATH/Electron Framework.framework/Versions/A/Libraries/libffmpeg.dylib"
     codesign -s "$APP_KEY" -f --entitlements child.plist "$FRAMEWORKS_PATH/Electron Framework.framework/Versions/A/Libraries/libnode.dylib"
@@ -81,11 +81,11 @@
     codesign -s "$APP_KEY" -f --entitlements child.plist "$FRAMEWORKS_PATH/$APP Helper NP.app/"
     codesign -s "$APP_KEY" -f --entitlements child.plist "$APP_PATH/Contents/MacOS/$APP"
     codesign -s "$APP_KEY" -f --entitlements parent.plist "$APP_PATH"
-    
+
     productbuild --component "$APP_PATH" /Applications --sign "$INSTALLER_KEY" "$RESULT_PATH"
 ```
 
-Если вы только начали разрабатывать под Mac OS X, то мы советуем Вам прочитать [App SandBox](https://developer.apple.com/library/ios/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html "Ссылка для новичков в разработке приложений для Mac OS X")
+Если вы только начали разрабатывать под macOS, то мы советуем Вам прочитать [App SandBox](https://developer.apple.com/library/ios/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html "Ссылка для новичков в разработке приложений для macOS")
 
 ## Обновление приложения
 
@@ -115,7 +115,7 @@
 - Некоторые специальные возможности могут не работать
 - Приложения не будут в курсе изменения DNS
 
-Также из-за использования SandBox App Store некоторые возможности могут быть не доступны или ограничены, подробнее о ограничениях 
+Также из-за использования SandBox App Store некоторые возможности могут быть не доступны или ограничены, подробнее о ограничениях
 Вы можете прочитать в [документации](https://developer.apple.com/app-sandboxing/ "Ссылка на ограничения в SandBox AppStore")
 
 # Криптографические алгоритмы которые использует Electron

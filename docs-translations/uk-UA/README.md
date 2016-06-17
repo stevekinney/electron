@@ -1,12 +1,12 @@
 Будь ласка, переконайтесь що ви використовуєте документацію, яка відповідає вашій версії Electron.
-Номер версії повинен бути присутнім в URL адресі сторінки. Якщо це не так, Ви можливо, 
-використовуєте документацію із development гілки, 
+Номер версії повинен бути присутнім в URL адресі сторінки. Якщо це не так, Ви можливо,
+використовуєте документацію із development гілки,
 яка може містити зміни в API, які не сумісні з вашою версією Electron.
-Якщо це так, тоді Ви можете переключитись на іншу версію документації 
+Якщо це так, тоді Ви можете переключитись на іншу версію документації
 із списку [доступних версій](http://electron.atom.io/docs/) на atom.io,
-або якщо ви використовуєте інтеррфейс GitHub, 
-тоді відкрийте список "Switch branches/tags" і виберіть потрібну вам 
-версію із списку тегів.  
+або якщо ви використовуєте інтеррфейс GitHub,
+тоді відкрийте список "Switch branches/tags" і виберіть потрібну вам
+версію із списку тегів.
 
 ## Довідник
 
@@ -77,7 +77,7 @@
 * [Source Code Directory Structure](development/source-code-directory-structure.md)
 * [Technical Differences to NW.js (formerly node-webkit)](development/atom-shell-vs-node-webkit.md)
 * [Build System Overview](development/build-system-overview.md)
-* [Build Instructions (OS X)](development/build-instructions-osx.md)
+* [Build Instructions (macOS)](development/build-instructions-osx.md)
 * [Build Instructions (Windows)](development/build-instructions-windows.md)
 * [Build Instructions (Linux)](development/build-instructions-linux.md)
 * [Setting Up Symbol Server in debugger](development/setting-up-symbol-server.md)
